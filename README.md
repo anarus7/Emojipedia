@@ -4,7 +4,6 @@
 
 ## Available Scripts
 ![Capture](https://github.com/anarus7/Emojipedia/assets/117738169/e4c3840d-7bcf-4051-b2ee-2507b4f9a29c)
-![Capture](https://github.com/anarus7/Emojipedia/assets/117738169/92da8c56-33eb-4056-8bc7-8ede00d58b45)
 
 In the project directory, you can run:
 
