@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Entry from "./Entry";
+import emojipedia from "./emojipedia";
+
+
+//1.Crate Entry Component
+//2.Create props to replace hardcoded data
+//3.Import the emojiedia data
+//4.Map trough the emojipedia array and render Entry components
+
+function  CreateEntry(emojiTerm){
+  return <Entry
+  key={emojiTerm.id}
+  emoji={emojiTerm.emoji}
+  name={emojiTerm.name}
+  description={emojiTerm.meaning}
+  />
+
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>
+        <span>Emojipedia</span>
+      </h1>
+      <dl className="dictionary">
+      {emojipedia.map(
+emojiTerm => {
+  return  <Entry
+  key={emojiTerm.id}
+  emoji={emojiTerm.emoji}
+  name={emojiTerm.name}
+  description={emojiTerm.meaning}
+  />
+
+})}
+      </dl>      
     </div>
   );
 }
